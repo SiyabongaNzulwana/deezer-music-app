@@ -13,13 +13,10 @@ code {
     monospace;
 }
 
-.App {
-  background-color: #f78da7;
-}
 .cards {
   display: inline-block;
   position: relative;
-  padding-top: 0px;
+  /* padding-top: 0px; */
 }
 .title {
   /* display: flex; */
@@ -53,4 +50,62 @@ code {
 
 .test {
   margin: 0%;
+}
+
+
+/* New styles here */
+
+.artist-details {
+  width: 70%;
+  background-image: url('https://via.placeholder.com/250');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 60px;
+  border-right: 1px solid #ccc;
+}
+
+.fan-count::after {
+  content: '';
+  display: block;
+  margin-top: 10px;
+  background: #000;
+  width: 5%;
+  height: 1px;
+}
+
+.top-tracks {
+  /* pading: 20px 40px; */
+  display: flex;
+  border-bottom: 1px solid;
+  margin-bottom: 25px
+}
+
+.top-tracks p {
+  margin: 0;
+  display: inline;
+}
+
+.artist-view-container {
+  display: flex;
+  border: 1px solid #ccc;
+  margin: 30px;
+}
+
+.top-track-title {
+  margin: 0;
+}
+
+.top-tracks-container {
+  padding: 1rem;
+  width: 30%;
+  padding: 40px 20px;
+}
+.numbers {
+  margin-right: 10px;
+}
+
+.track-details {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
