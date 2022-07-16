@@ -1,11 +1,11 @@
 body {
-  margin: 0;
-  background-color: #f78da7;
+  /* margin: 0; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
@@ -15,15 +15,12 @@ code {
 
 .cards {
   display: inline-block;
-  position: relative;
-  /* padding-top: 0px; */
+  margin-bottom: 0px;
 }
 .title {
-  /* display: flex; */
   align-items: flex-start;
   margin: 10px 10px;
   font-size: small;
-  /* font-weight: bold; */
 }
 
 .duration {
@@ -46,10 +43,8 @@ code {
   font-size: small;
   margin-top: 15px;
   box-sizing: border-box;
-}
-
-.test {
-  margin: 0%;
+  border: none;
+  margin-top: 25px;
 }
 
 
@@ -57,7 +52,6 @@ code {
 
 .artist-details {
   width: 70%;
-  background-image: url('https://via.placeholder.com/250');
   background-repeat: no-repeat;
   background-size: cover;
   padding: 60px;
@@ -74,7 +68,6 @@ code {
 }
 
 .top-tracks {
-  /* pading: 20px 40px; */
   display: flex;
   border-bottom: 1px solid;
   margin-bottom: 25px
@@ -88,11 +81,22 @@ code {
 .artist-view-container {
   display: flex;
   border: 1px solid #ccc;
-  margin: 30px;
+  margin: 30px 30px 0px 30px;
 }
 
 .top-track-title {
   margin: 0;
+}
+
+.search-container {
+  background-color: #c1f1fc;
+  border: 2px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  width: -moz-fit-content;
+  padding: 5px;
+  margin-bottom: 1em;
+  margin-right: 0;
 }
 
 .top-tracks-container {
@@ -108,4 +112,73 @@ code {
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+
+.album-container {
+  border: 1px solid #ccc;
+  border-top: none;
+  margin: 0px 30px 30px 30px;
+}
+.album-view {
+  display: flex;
+  margin: 0 auto;
+  min-width: 480px;
+  width: 60%;
+
+}
+.album {
+  max-width: 150px;
+}
+.album-details {
+  font-size: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.album-title {
+  width: 60%;
+  margin: 0 auto;
+}
+.album-outer {
+  padding: 30px;
+}
+.album-year {
+  font-size: 8px;
+}
+.track-list-track-details {
+  display: flex;
+  padding: 10px 10px 0px 10px;
+  justify-content: space-between;
+  margin: unset;
+}
+
+.track-list-track-title {
+  display: flex;
+  margin: 10px 10px;
+  justify-content: space-between;
+  margin: unset;
+  font-weight: bold;
+
+}
+.track-list-track-duration {
+  font-size: 10px;
+  margin: 0px;
+}
+.track-list-track-by {
+  margin: 0px auto;
+  font-size: 10px;
+}
+
+.track-list-track-artist-album {
+  display: block;
+  padding: 0px 10px 0px 10px;
+}
+.track-list-track-only-album {
+  font-size: 10px;
+  font-style: small;
+  font-weight: bold;
+}
+.navbar {
+  position: fixed;
+  display:inline-block;
+  content: flex
 }

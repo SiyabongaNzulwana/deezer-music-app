@@ -5,14 +5,12 @@ import ArtistView from './components/ArtistView'
 
 function App() {
   return (
-    < div>
     <BrowserRouter>
       <Routes>
         <Route exact path='/' element={<SearchBar />}></Route>
-        <Route exact path='/artists/:artistId' element={<ArtistView />}></Route>
+        <Route path='/artists/:artistId' element={<ArtistView />}></Route>
       </Routes>
     </BrowserRouter>
-    </div>
   )
 }
 

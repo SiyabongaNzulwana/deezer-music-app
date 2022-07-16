@@ -2,6 +2,8 @@ import ArtistDetails from './ArtistDetails'
 import TopTracks from './TopTracks'
 import useFetch from './utils/useFetch'
 import { useParams } from 'react-router-dom'
+import AlbumView from './AlbumView'
+import Spinner from './utils/Spinner'
 
 const ArtistView = () => {
   const { artistId } = useParams()
@@ -21,22 +23,40 @@ const ArtistView = () => {
   )
 
   return (
-    <div className='artist-view-container'>
-      {isArtistError && <div>{isArtistError}</div>}
-      {isPendingArtist && <div> Loading Artist...</div>}
+    <div>
+      <div className='artist-view-container'>
+        {isArtistError && (
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            {isArtistError}
+          </div>
+        )}
+        {artist && !isArtistError && !isPendingArtist ? (
+          <ArtistDetails
+            artistName={artist.name}
+            numberOfFans={artist.nb_fan}
+            imageUrl={artist.picture_xl}
+          />
+        ) : (
+          Spinner()
+        )}
+        {topTracksError && (
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            {topTracksError}
+          </div>
+        )}
+        {topFiveTracks &&
+        topFiveTracks.length &&
+        !isPendingTopTracks &&
+        !topTracksError ? (
+          <TopTracks tracks={topFiveTracks} />
+        ) : (
+          Spinner()
+        )}
+      </div>
       {artist ? (
-        <ArtistDetails artistName={artist.name} numberOfFans={artist.nb_fan} />
+        <AlbumView artistName={artist.name} />
       ) : (
-        <p>No artist found with that ID</p>
-      )}
-
-      {topTracksError && <div>{topTracksError}</div>}
-      {isPendingTopTracks && <div> Loading Top Tracks...</div>}
-
-      {topFiveTracks ? (
-        <TopTracks tracks={topFiveTracks} />
-      ) : (
-        <p>No top tracks found for that artist.</p>
+        Spinner()
       )}
     </div>
   )

@@ -9,6 +9,7 @@
     "bootstrap": "^4.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-loader-spinner": "^5.1.5",
     "react-parallax-tilt": "^1.7.44",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
@@ -40,5 +41,5 @@
   },
   "resolutions": {
     "autoprefixer": "10.4.5"
-}
+  }
 }

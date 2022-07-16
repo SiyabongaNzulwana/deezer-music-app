@@ -1,22 +1,26 @@
-import Tilt from 'react-parallax-tilt';
-import { Link } from "react-router-dom"
+import Tilt from 'react-parallax-tilt'
+import { Link } from 'react-router-dom'
+import convertSecondsToMinutes from '../helpers/convertSeconds'
 
 const TrackListView = ({ track }) => {
-  const { id, title, name, picture } = track.artist
+  const { id, name, picture } = track.artist
   return (
     <Tilt>
-    <div className='card' style={{ width: '14rem' }}>
-      <Link to={`/artists/${id}`} state={track.artist}>
-        <img src={picture} alt='' width={222} height={222}/>
-      </Link>
-      
-      <div>
-        <p className="test">{title}</p>
-        <p className="test">{track.duration}</p>
-        <p className="test">By {name}</p>
-        <p className="test">{track.album.title}</p>
+      <div className='card' style={{ width: '14rem' }}>
+        <Link to={`/artists/${id}`} state={track.artist}>
+          <img src={picture} alt='' width={222} height={222} />
+        </Link>
+        <div className='track-list-track-details'>
+          <p className='track-list-track-title'>{track.title_short}</p>
+          <p className='track-list-track-duration'>
+            {convertSecondsToMinutes(track.duration)}
+          </p>
+        </div>
+        <div className='track-list-track-artist-album'>
+          <p className='track-list-track-by'>By {name}</p>
+          <p className='track-list-track-only-album'>{track.album.title}</p>
+        </div>
       </div>
-    </div>
     </Tilt>
   )
 }
