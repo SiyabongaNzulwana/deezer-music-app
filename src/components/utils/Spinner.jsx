@@ -1,14 +1,4 @@
-import { Rings } from 'react-loader-spinner'
-const Spinner = () => {
-  return (
-    <Rings
-      color='#fcc1db;'
-      height={150}
-      width={150}
-      ariaLabel='loading'
-      style={{ display: 'flex', justifyContent: 'center' }}
-    />
-  )
-}
+import BounceLoader from 'react-spinners/BounceLoader'
+const Spinner = (isPending) => <BounceLoader color={'green'} loading={isPending} size={100} style={{ display: 'flex', justifyContent: 'center' }}/>
 
 export default Spinner

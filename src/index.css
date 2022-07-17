@@ -180,5 +180,101 @@ code {
 .navbar {
   position: fixed;
   display:inline-block;
-  content: flex
+  content: flex;
+  justify-content: space-around;
+  margin-left: 5px;
+
+
+}
+.navbar .navbar-light .bg-light{
+  background-color: #2b303b !important;
+}
+.artist-view-container-root {
+  /* height: 100vh; */
+  background-color: #c1f1fc;
+
+  
+}
+.artist-description {
+  background-color: #ecfafc;
+  opacity: 0.8;
+  color: #000;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.ml-auto .mx-auto {
+  margin-left: 0px !important;
+}
+
+
+.mr-auto, .mx-auto {
+  margin-right: 0px !important;
+}
+.form {
+  width: 50%;
+}
+
+.search-input {
+  width: 300px;
+  height: 50px;
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: #63717f;
+  padding-left: 20px;
+  padding-right: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .artist-view-container-root {
+    /* display: block; */
+  }
+  .artist-view-container {
+    display: inline-block;
+  }
+  .top-tracks-top-tracks {
+    font-size: 20px;
+    font-weight: bold;
+
+  }
+  .artist-details {
+    padding: 0px;
+    width: unset;
+  }
+  .each-track {
+    width: unset;
+  }
+  .top-tracks-container {
+    width: unset;
+  }
+  .album-view{
+    display: inline-block;
+    padding-left:55px
+  }
+  .artist-view-container-root {
+    height: unset;
+  }
+  .artist-description {
+    padding: 15px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .fan-count {
+    padding-left: 15px;
+  }
+  .artist-title-name {
+    padding-left: 15px;
+  }
+  .search-input {
+    width: unset;
+  }
+  .cards {
+    padding-left: 20%;  padding-left: 20%;
+  }
 }

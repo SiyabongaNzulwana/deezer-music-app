@@ -1,8 +1,8 @@
 const ArtistDetails = ({ artistName, numberOfFans, imageUrl }) => {
   return (
     <div className="artist-details" style={{backgroundImage: 'url(' + imageUrl + ')', backgroundPosition: 'center'}}>
-      <div className="artist-fans">
-        <h2>{artistName}</h2>
+      <div>
+        <h2 className="artist-title-name">{artistName}</h2>
         <p className="fan-count"><strong>{numberOfFans >= 1000 ? `${Math.floor(numberOfFans / 1000)}k` : numberOfFans}</strong> fans</p>
       </div>
       <p className="artist-description">

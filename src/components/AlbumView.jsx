@@ -15,7 +15,11 @@ const AlbumView = ({ artistName }) => {
         <div className='album-title'>
           <h6>Albums</h6>
         </div>
-        {albums && albums.data.length && !error && !isPending? (
+        {error && (
+        <div style={{ display: 'flex', justifyContent: 'center' }}>{error}</div>
+      )}
+        {isPending && Spinner(isPending)}
+        {albums && albums.data.length && (
           <div className='album-view'>
             {albums &&
               albums.data.length &&
@@ -29,8 +33,6 @@ const AlbumView = ({ artistName }) => {
                 </div>
               ))}
           </div>
-        ) : (
-          Spinner()
         )}
       </div>
     </div>
